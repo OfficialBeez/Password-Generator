@@ -21,15 +21,16 @@ var passwordLength = function() {
 }
 
 function generatePassword() {
-  
-  do {
-    confirmLc = confirm("Password Criteria : Lower Case?");
-    confirmUc = confirm("Password Criteria : Upper Case?");
-    confirmS = confirm("Password Criteria : Special Characters?");
-    confirmN = confirm("Password Criteria : Numbers?");
-  } while (!(special,numbers,lowerCase,upperCase));
-
   pLength = passwordLength();
+  do {
+    confirmLc = confirm("Password Criteria 1/4 : Lower Case?");
+    confirmUc = confirm("Password Criteria 2/4 : Upper Case?");
+    confirmS = confirm("Password Criteria 3/4 : Special Characters?");
+    confirmN = confirm("Password Criteria 4/4 : Numbers?");
+  //For some reason wording is important instead of !() it has to be === false or certain sequences make it loop
+  } while (confirmLc === false && confirmUc === false && confirmN === false && confirmS === false);
+
+//Pulls the true data and puts it in the concat array.
    var insert = []
 
   if (confirmLc === true) {
@@ -48,6 +49,7 @@ function generatePassword() {
   console.log(insert);
   
   password = "";
+//Randomizes the concat array for the length of password
   for (let i = 0; i < pLength; i++) {
    password = password + insert[Math.floor(Math.random() * insert.length)];
   }
