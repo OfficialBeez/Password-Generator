@@ -1,20 +1,9 @@
-# 03 JavaScript: Password Generator
+# Password Generator | JK
 
-Create an application that generates a random password based on user-selected criteria. The app runs in the browser and features dynamically updated HTML and CSS powered by your JavaScript code. It has a clean and polished user interface and is responsive, which ensures that it adapts to multiple screen sizes.
-
-If you are unfamiliar with special characters, take a look at some [examples of special characters on the OWASP Foundation website](https://www.owasp.org/index.php/Password_special_characters).
-
-## User Story
-
-```
-AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
-SO THAT I can create a strong password that provides greater security
-```
+This a simple password generator. Could be used for securing social or personal accounts.
 
 ## Acceptance Criteria
 
-```
 GIVEN I need a new, secure password
 WHEN I click the button to generate a password
 THEN I am presented with a series of prompts for password criteria
@@ -30,19 +19,25 @@ WHEN all prompts are answered
 THEN a password is generated that matches the selected criteria
 WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
-```
 
-The following image demonstrates the application functionality:
+## Deployment
 
-![An app window with the label Password Generator, an input field labeled Your Secure Password, and a Generate Password button.](./Assets/03-javascript-homework-demo.png)
+Deployment of the Website can be found :
+<br> https://officialbeez.github.io/Password-Generator/
+
+
+### Screenshot
+
+The following animation/screenshot shows the web application's appearance and functionality:
+
+![Screenshot](Refrence.png)
 
 ## Review
 
-You are required to submit the following for review:
+Code and Mock-up Requirments are from the U of A Challenge 3
+Code Done By : Jeffery Koon
+Do not copy any of my Code.
 
-* The URL of the deployed application.
+## Issues
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-- - -
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+Check Issues tab for any remaining issue(s) if any

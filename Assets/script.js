@@ -1,4 +1,8 @@
 //Variables for the generation
+var confirmLc;
+var confirmUc;
+var confirmS;
+var confirmN;
 var lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 var numbers = ["1","2","3","4","5","6","7","8","9","0"];
@@ -18,20 +22,36 @@ var passwordLength = function() {
 
 function generatePassword() {
   
-  pLength = passwordLength();
-  
   do {
-    lowerCase = confirm("Password Criteria : Lower Case?");
-    upperCase = confirm("Password Criteria : Upper Case?");
-    special = confirm("Password Criteria : Need Special Characters?");
-    numbers = confirm("Password Criteria : numbers?");
+    confirmLc = confirm("Password Criteria : Lower Case?");
+    confirmUc = confirm("Password Criteria : Upper Case?");
+    confirmS = confirm("Password Criteria : Special Characters?");
+    confirmN = confirm("Password Criteria : Numbers?");
   } while (!(special,numbers,lowerCase,upperCase));
 
+  pLength = passwordLength();
+   var insert = []
+
+  if (confirmLc === true) {
+      insert = insert.concat(lowerCase);
+  }
+  if (confirmUc === true) {
+      insert = insert.concat(upperCase);
+  }
+  if (confirmS === true) {
+    insert = insert.concat(special);
+  }
+  if (confirmN === true) {
+    insert = insert.concat(numbers);
+  }
+  
+  console.log(insert);
   
   password = "";
-
-
-// return password;
+  for (let i = 0; i < pLength; i++) {
+   password = password + insert[Math.floor(Math.random() * insert.length)];
+  }
+   return password;
 }
 
 // Assignment Code
