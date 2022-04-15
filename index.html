@@ -8,14 +8,17 @@
     <link rel="stylesheet" href="Assets/style.css" />
   </head>
   <body>
+    <!--Header-->
     <div class="wrapper">
       <header>
         <h1>Password Generator</h1>
       </header>
+      <!--Main Password Generator Card-->
       <main class="card">
         <div class="card-header">
           <h2>Generate a Password</h2>
         </div>
+        <!--Password Gen that pulls from JS-->
         <div class="card-body">
           <textarea
             readonly
@@ -24,11 +27,13 @@
             aria-label="Generated Password"
           ></textarea>
         </div>
+        <!--Generation Button-->
         <div class="card-footer">
           <button id="generate" class="btn">Generate Password</button>
         </div>
       </main>
     </div>
+    <!--Pulling Javascript to the page-->
     <script src="Assets/script.js"></script>
   </body>
 </html>
